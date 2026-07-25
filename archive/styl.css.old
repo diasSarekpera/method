@@ -1,0 +1,559 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Conteneur principal pour centrer le contenu */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centre le conteneur */
+}
+
+
+/*   2. Header */
+
+header {
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+    position: fixed;
+    width: 100%; /* Couvre toute la largeur */
+    top: 0;
+    left: 0; /* Aligné à gauche sans espace */
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Menu de navigation */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #008a6e;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #007BFF;
+}
+
+/* Le reste de votre CSS peut suivre ici... */
+/*Section Bienvenue */
+.Bienvenue {
+  background-color: #fff;
+  padding: 120px 40px 80px 40px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+}
+
+
+.texte-bienvenue {
+  flex: 1;
+  min-width: 320px;
+}
+
+.texte-bienvenue h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #000;
+  text-align: justify;
+}
+
+.texte-bienvenue .accent {
+  color: #008a6e;
+  font-weight: bold;
+}
+
+.texte-bienvenue p {
+  text-align: justify;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.texte-bienvenue a.btn {
+  background-color: #008a6e;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.texte-bienvenue a.btn:hover {
+  background-color: #00b2b2;
+}
+
+.image-bienvenue {
+  flex: 1;
+  text-align: center;
+}
+
+.image-bienvenue img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 16px;
+  transition: transform 0.4s ease;
+}
+/* Apropos Section */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9ff;
+  padding: 60px;
+  font-family: Arial, sans-serif;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h2 {
+  color: #008a6e;
+  margin-bottom: 20px;
+}
+
+.about-text .highlight {
+  color: #008a6e;
+  font-weight: bold;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.btn-cv {
+  background-color: #008a6e;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* espace entre l'icône et le texte */
+  margin-top: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cv i {
+  font-size: 18px;
+  color: white;
+}
+
+.btn-cv:hover {
+  background-color: #006f59;
+}
+
+
+.btn-cv:hover {
+  background-color: #008a6e;
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #008a6e;
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .burger span {
+    width: 25px;
+    height: 3px;
+    background-color: #008a6e;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Bienvenue {
+    margin: 120px 20px 40px 20px;
+    padding: 20px;
+  }
+
+  .Bienvenue button {
+    width: 100%;
+  }
+}
+
+.form-section {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,   /* moins sombre en haut */
+      rgba(0, 0, 0, 0.3) 30%,  /* moins de noir sur l’image */
+      #000 100%,                /* commence à devenir noir plus bas */
+      #000 100%
+    ),
+    url('img/Méthodeh.png') no-repeat center top;
+  background-size: cover;
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+
+
+/* Formulaire stylisé */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px; /* largeur plus grande */
+  margin: 600px auto 0 auto; /* ↓ formulaire plus bas */
+  padding: 150px; /* plus haut et plus large */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+
+form input,
+form textarea {
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+}
+
+
+form button {
+  background-color: #008a6e;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #006f59;
+}
+
+#formMessage {
+  margin-top: 10px;
+  font-weight: bold;
+  color: red;
+}
+.projets-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.projets-section h2 {
+  color: #00c4b3;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.projets-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.projet-carte {
+  background-color: #f9f9fc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 30px 20px;
+  max-width: 280px;
+  text-align: center;
+}
+
+.projet-carte p {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.projet-carte .tags {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.btn-projet {
+  background-color: #00c4b3;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-projet:hover {
+  background-color: #009a91;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Section compétences */
+.skills-section {
+  padding: 80px 20px;
+  background-color: #f0f2f5;
+}
+
+/* Conteneur principal */
+.container {
+  background-color: #fff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Titre principal */
+.container h1 {
+  text-align: center;
+  color: #00bfa6;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* Grille alignée en ligne */
+.skills-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Catégorie */
+.skill-category {
+  flex: 1 1 30%;
+  min-width: 280px;
+}
+
+/* Titre de catégorie */
+.skill-category h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #222;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Compétence individuelle */
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Barre de progression */
+/* ===== Barre de progression (optionnelle pour skills) ===== */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #00bfa6;
+  width: 0;
+  border-radius: 6px;
+  transition: width 1.2s ease;
+}
+
+/*Section À propos*/
+.about-section {
+  background-color: #f9f9f9;
+  padding: 100px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; /* Permet à l’image de prendre toute la hauteur disponible */
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.about-text .subtitle {
+  font-weight: 600;
+  color: #4a90e2;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #555;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.about-image img.hero {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+}
+
+
+/*Footer*/
+
+footer {
+  background-color: #008a6e;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 100px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  font-size: 14px;
+}
+
+.footer-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu li a {
+  text-decoration: none;
+}
+
+.footer-menu img {
+  height: 30px;
+  width: 30px;
+}
+
