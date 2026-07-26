@@ -1,0 +1,182 @@
+/* =========================================================================
+   BANNIERE.CSS — bannière de couverture + identité (avatar, nom, actions)
+   ========================================================================= */
+
+.profil-banniere {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.profil-banniere-img {
+  width: 100%;
+  height: var(--profil-banniere-hauteur);
+  object-fit: cover;
+  display: block;
+}
+
+.profil-identite {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 0 var(--profil-padding-x) var(--profil-gap-l);
+}
+
+/* Avatar : anneau blanc + pastille "en ligne", remonté sur la bannière */
+.profil-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+
+  width: var(--profil-avatar-taille);
+  height: var(--profil-avatar-taille);
+  border-radius: 50%;
+
+  margin-top: calc(var(--profil-avatar-taille) / -2);
+  border: 4px solid #ffffff;
+  background-color: var(--profil-color-pill-bg);
+}
+
+.profil-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.profil-avatar-wrap::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(15%, 15%);
+
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+
+  background-color: var(--profil-color-online);
+  border: 2.5px solid #ffffff;
+}
+
+/* Ligne sous l'avatar : bloc identité à gauche, icônes + CTA à droite */
+.profil-identite-ligne {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--profil-gap-m);
+
+  width: 100%;
+  margin-top: var(--profil-gap-l);
+}
+
+.profil-identite-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  flex: 1 1 200px;
+}
+
+.profil-nom {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: var(--profil-color-text);
+}
+
+/* "Senior UI & UX Designer" -> violet vif, mesuré sur la maquette */
+.profil-titre {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--profil-color-role);
+}
+
+.profil-lieu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--profil-color-text-muted);
+}
+
+.profil-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--profil-gap-m);
+
+  flex: 0 0 auto;
+}
+
+.profil-reseaux {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--profil-gap-s);
+
+  list-style: none;
+}
+
+.profil-reseaux li {
+  display: flex;
+}
+
+.profil-reseaux a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--profil-color-border-strong);
+  background: #ffffff;
+  color: var(--profil-color-text-secondary);
+
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.profil-reseaux a:hover {
+  background: var(--profil-color-pill-bg);
+  color: var(--profil-color-text);
+}
+
+.profil-reseaux svg {
+  width: 17px;
+  height: 17px;
+}
+
+.profil-btn-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 8px 16px;
+  border-radius: var(--profil-radius-pill);
+  border: none;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+
+  background: var(--profil-color-cta-bg);
+  color: var(--profil-color-cta-text);
+
+  transition: background-color 0.15s ease;
+}
+
+.profil-btn-contact:hover {
+  background: var(--profil-color-cta-bg-hover);
+}
+
+.profil-btn-contact i {
+  color: var(--profil-color-cta-text);
+}

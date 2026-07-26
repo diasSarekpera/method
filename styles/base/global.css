@@ -1,0 +1,33 @@
+/* =========================================================================
+   GLOBAL.CSS — styles globaux communs à toutes les pages du site
+   ========================================================================= */
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--profil-gap-s);
+  min-height: 100vh;
+
+  font-family: var(--font-main);
+  background-color: var(--background-light);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}

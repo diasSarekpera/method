@@ -1,0 +1,89 @@
+/* =========================================================================
+   PROJETS-PHARES.CSS — section "Projets phares" (featured work)
+   ========================================================================= */
+
+.profil-projets-phares .profil-bloc-entete {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--profil-gap-m);
+
+  /* séparateur horizontal entre l'entête et la grille de projets, comme sur la maquette */
+  padding-bottom: var(--profil-gap-m);
+  border-bottom: 1px solid var(--profil-color-border);
+}
+
+.profil-projets-phares .profil-eyebrow {
+  /* label plus contrasté que l'eyebrow générique, fidèle à la capture */
+  color: var(--profil-color-text);
+}
+
+.profil-btn-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--profil-color-border-strong);
+  background: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--profil-color-text);
+
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.profil-btn-outline:hover {
+  background: var(--profil-color-pill-bg);
+}
+
+.profil-projets-grille {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--profil-gap-m);
+}
+
+.profil-projet-carte {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  flex: 1 1 calc(50% - var(--profil-gap-m) / 2);
+  min-width: 160px;
+
+  /* fin séparateur vertical entre les deux cartes, comme sur la maquette */
+  padding-right: var(--profil-gap-m);
+  border-right: 1px solid var(--profil-color-border);
+}
+
+.profil-projet-carte:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+.profil-projet-carte img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--profil-radius-image);
+  display: block;
+}
+
+.profil-projet-carte h3 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--profil-color-text);
+}
+
+.profil-projet-carte p {
+  font-size: 0.9rem;
+  color: var(--profil-color-text-secondary);
+}

@@ -1,0 +1,24 @@
+/* =========================================================================
+   RESPONSIVE.CSS — garde-fou responsive minimal (pas d'adaptation complète)
+   ========================================================================= */
+
+@media (max-width: 480px) {
+  :root {
+    --profil-padding-x: 16px;
+  }
+
+  .profil-identite {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profil-actions {
+    align-items: flex-start;
+    padding-top: 0;
+  }
+
+  .profil-projet-carte {
+    border-right: none;
+    padding-right: 0;
+  }
+}

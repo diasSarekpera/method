@@ -3,34 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Méthode Hounkanrin — Profil</title>
+  <title>Méthode Hounkanrin · Profil</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/pages/profil/profil.css">
+  <link rel="stylesheet" href="styles/home/main.css">
 </head>
 <body>
 
-  <!-- Header : le site n'a plus qu'une seule page, le logo pointe simplement sur lui-même -->
-  <header>
-    <nav class="navbar">
-      <div class="container">
-        <a href="index.html" class="logo"><img src="assets/images/M.png" alt="methode logo"></a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- ================= CARTE PROFIL ================= -->
   <main class="profil-card">
 
     <!-- Bannière + avatar + identité -->
     <section class="profil-banniere">
-      <img class="profil-banniere-img" src="https://placehold.co/960x320/8fa6bd/ffffff?text=Banni%C3%A8re+(temporaire)" alt="Bannière de profil">
+      <img class="profil-banniere-img" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=400&fit=crop&q=80" alt="Bannière de profil">
 
       <div class="profil-identite">
         <span class="profil-avatar-wrap">
-          <img class="profil-avatar" src="https://placehold.co/300x300/e2e8f0/1e293b?text=MH" alt="Photo de profil de Méthode Hounkanrin">
+          <img class="profil-avatar" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=300&h=300&fit=crop&q=80" alt="Photo de profil de Méthode Hounkanrin">
         </span>
 
+        <div class="profil-identite-ligne">
         <div class="profil-identite-infos">
           <h1 class="profil-nom">Méthode Hounkanrin</h1>
           <p class="profil-titre">Consultant en Marketing Digital &amp; Développeur Web</p>
@@ -41,27 +31,29 @@
           <ul class="profil-reseaux">
             <li>
               <a href="https://web.facebook.com/methode.hounkanrin.37?locale=fr_FR" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <img src="assets/images/F.png" alt="Facebook">
-              </a>
-            </li>
-            <li>
-              <a href="https://wa.me/96320368" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                <img src="assets/images/W.png" alt="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M13.5 9H15V6.5h-1.5C11.6 6.5 10 8.1 10 10v2H8v2.5h2V21h2.5v-6.5H15l.4-2.5h-2.9V10c0-.6.4-1 1-1z"/>
+                </svg>
               </a>
             </li>
             <li>
               <a href="https://youtube.com/@methodeh9889?si=jKQFaG8DCnwxyPQX" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <img src="assets/images/Y.png" alt="YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M21.6 7.2s-.2-1.5-.8-2.2c-.8-.8-1.7-.9-2.1-.9C15.9 4 12 4 12 4s-3.9 0-6.7.1c-.4.1-1.3.2-2.1.9C2.6 5.7 2.4 7.2 2.4 7.2S2.2 9 2.2 10.7v1.5C2.2 14 2.4 15.7 2.4 15.7s.2 1.5.8 2.2c.8.9 1.8.8 2.3.9C7.3 19 12 19.1 12 19.1s3.9 0 6.7-.2c.4 0 1.3-.2 2.1-.9.6-.7.8-2.2.8-2.2s.2-1.7.2-3.5v-1.5c0-1.8-.2-3.5-.2-3.5ZM9.9 14.5V8.9l5.4 2.8-5.4 2.8Z"/>
+                </svg>
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/m%C3%A9thode-hounkanrin-777b398b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <img src="assets/images/L.png" alt="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M6.9 8.4H3.6V20h3.3V8.4ZM5.3 3.7a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM20.4 20h-3.3v-6.1c0-1.5-.5-2.5-1.8-2.5-1 0-1.6.7-1.9 1.3-.1.2-.1.5-.1.9V20H10s0-10.9 0-12h3.3v1.7c.4-.7 1.2-1.7 3-1.7 2.2 0 3.9 1.4 3.9 4.5V20Z"/>
+                </svg>
               </a>
             </li>
           </ul>
           <!-- contact.html supprimé : bouton redirigé vers le canal de contact réel déjà utilisé sur le site (WhatsApp) -->
           <a href="https://wa.me/96320368" target="_blank" rel="noopener noreferrer" class="profil-btn-contact"><i class="fas fa-bolt"></i> Me contacter</a>
+        </div>
         </div>
       </div>
     </section>
@@ -70,8 +62,8 @@
     <section class="profil-bloc profil-apropos">
       <h2 class="profil-eyebrow">À propos de moi</h2>
       <p class="profil-apropos-texte">
-        Salut, je suis Méthode — consultant en <span class="profil-surligne">marketing digital</span> et développeur web basé à
-        <span class="profil-souligne">Comè</span>, où j'accompagne les entreprises et organisations dans l'amélioration de leur
+        Salut, je suis Méthode, consultant en <span class="profil-surligne">marketing digital</span> et développeur web basé à
+        Comè, où j'accompagne les entreprises et organisations dans l'amélioration de leur
         présence en ligne et la création de solutions numériques sur mesure.
       </p>
       <p class="profil-apropos-secondaire">
@@ -97,18 +89,18 @@
     <section class="profil-bloc profil-projets-phares">
       <div class="profil-bloc-entete">
         <h2 class="profil-eyebrow">Projets phares</h2>
-        <a href="docs/mon-cv.pdf" class="profil-btn-outline" download><i class="fas fa-download"></i> Télécharger mon CV</a>
+        <a href="docs/mon-cv.pdf" class="profil-btn-outline" download>Télécharger mon CV</a>
       </div>
 
       <div class="profil-projets-grille">
         <article class="profil-projet-carte">
-          <img src="https://placehold.co/600x450/e2e8f0/1e293b?text=Mini+E-commerce" alt="Application e-commerce">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=450&fit=crop&q=80" alt="Application e-commerce">
           <h3>Mini E-commerce</h3>
           <p>Développeur Web, Designer Produit</p>
         </article>
 
         <article class="profil-projet-carte">
-          <img src="https://placehold.co/600x450/e2e8f0/1e293b?text=Dashboard+Analytics" alt="Tableau de bord analytics">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=450&fit=crop&q=80" alt="Tableau de bord analytics">
           <h3>Dashboard Analytics</h3>
           <p>Développeur Web, Designer Produit</p>
         </article>
@@ -123,7 +115,7 @@
         <div class="profil-experience-icone"><i class="fas fa-laptop-code"></i></div>
         <div class="profil-experience-contenu">
           <div class="profil-experience-ligne">
-            <h3>Consultant Marketing Digital &amp; Développeur Web — Freelance</h3>
+            <h3>Consultant Marketing Digital &amp; Développeur Web · Freelance</h3>
             <span class="profil-tag-date"><i class="fas fa-house-laptop"></i> 2022 – Présent · À distance</span>
           </div>
           <ul>
@@ -138,7 +130,7 @@
         <div class="profil-experience-icone"><i class="fas fa-water"></i></div>
         <div class="profil-experience-contenu">
           <div class="profil-experience-ligne">
-            <h3>Chargé de contrôle de travaux — Génie Rural</h3>
+            <h3>Chargé de contrôle de travaux · Génie Rural</h3>
             <span class="profil-tag-date"><i class="fas fa-location-dot"></i> Dates à préciser · Bénin</span>
           </div>
           <ul>
@@ -152,7 +144,7 @@
         <div class="profil-experience-icone"><i class="fas fa-people-group"></i></div>
         <div class="profil-experience-contenu">
           <div class="profil-experience-ligne">
-            <h3>Engagement associatif — JCI Comè Excellence, Mairie des Jeunes, U-Reporter, Amnesty International</h3>
+            <h3>Engagement associatif · JCI Comè Excellence, Mairie des Jeunes, U-Reporter, Amnesty International</h3>
             <span class="profil-tag-date"><i class="fas fa-location-dot"></i> Dates à préciser · Comè, Bénin</span>
           </div>
           <ul>
@@ -172,8 +164,8 @@
         <span class="profil-formation-date">Dates à préciser</span>
         <span class="profil-formation-puce"></span>
         <div class="profil-formation-contenu">
-          <h3>Diplôme d'Études Agricoles Tropicales (D.E.A.T.) — Aménagement et Équipement Rural</h3>
-          <p>Formation agricole et technique — Bénin</p>
+          <h3>Diplôme d'Études Agricoles Tropicales (D.E.A.T.) · Aménagement et Équipement Rural</h3>
+          <p>Formation agricole et technique · Bénin</p>
         </div>
       </div>
 
@@ -182,7 +174,7 @@
         <span class="profil-formation-puce"></span>
         <div class="profil-formation-contenu">
           <h3>Licence Professionnelle en Génie Rural</h3>
-          <p>Aménagement et Équipement Rural — Bénin</p>
+          <p>Aménagement et Équipement Rural · Bénin</p>
         </div>
       </div>
 
@@ -191,7 +183,7 @@
         <span class="profil-formation-puce"></span>
         <div class="profil-formation-contenu">
           <h3>Développement Web &amp; Marketing Digital</h3>
-          <p>Formation continue autodidacte — HTML, CSS, JavaScript, SEO, WordPress</p>
+          <p>Formation continue autodidacte · HTML, CSS, JavaScript, SEO, WordPress</p>
         </div>
       </div>
     </section>
@@ -218,10 +210,10 @@
 
   <!-- Footer -->
   <footer class="profil-footer">
-    <p>&copy; 2025 Méthode Hounkanrin — Tous droits réservés.</p>
+    <p>&copy; 2025 Méthode Hounkanrin · Tous droits réservés.</p>
     <p class="profil-footer-secondaire">Créé avec soin · Basé à Comè, Bénin</p>
   </footer>
 
-  <script src="scripts/portfolio.js"></script>
+  <script type="module" src="scripts/home/main.js"></script>
 </body>
 </html>
