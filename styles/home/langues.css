@@ -61,17 +61,18 @@
 }
 
 /* Une fois le reveal armé (voir motion.js / motion.css), la jauge part de
-   0 et ne se remplit jusqu'à --progress qu'au moment où la section Langues
-   devient visible — même déclencheur (.is-visible) que la cascade des
-   autres éléments de la section, donc le remplissage se relance lui aussi
-   à chaque rechargement complet de la page. */
-.motion-armed .profil-langues .profil-langue-jauge-remplissage {
+   0 et ne se remplit jusqu'à --progress qu'au moment où SA propre ligne
+   (.profil-langue-item, elle-même un .motion-stagger-item observé
+   individuellement) entre dans le viewport — donc le remplissage se
+   relance lui aussi à chaque rechargement complet de la page, et chaque
+   langue anime indépendamment au fil du scroll. */
+.motion-armed .profil-langue-item .profil-langue-jauge-remplissage {
   width: 0%;
 }
 
-.motion-armed .profil-langues.is-visible .profil-langue-jauge-remplissage {
+.motion-armed .profil-langue-item.is-visible .profil-langue-jauge-remplissage {
   width: var(--progress, 0%);
-  /* Léger délai : la jauge se remplit une fois la cascade des éléments
-     bien engagée, plutôt qu'en même temps que leur fondu d'entrée. */
+  /* Léger délai : la jauge se remplit une fois le fondu d'entrée de la
+     ligne bien engagé, plutôt qu'en même temps que lui. */
   transition-delay: calc(var(--motion-stagger-step) * 2);
 }

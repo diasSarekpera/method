@@ -31,7 +31,7 @@
   transition-delay: calc(var(--i, 0) * var(--motion-stagger-step));
 }
 
-.motion-armed .is-visible .motion-stagger-item {
+.motion-armed .motion-stagger-item.is-visible {
   opacity: 1;
   transform: translate(0, 0) scale(1);
 }
