@@ -89,6 +89,7 @@
   --motion-duration-fast: 180ms;    /* hover, focus, feedback immédiat */
   --motion-duration-state: 240ms;   /* changements d'état (validation, ouverture) */
   --motion-duration-enter: 650ms;   /* apparitions (fade up, reveal) */
+  --motion-duration-slow: 1100ms;   /* remplissages progressifs (jauges de langues) */
   --motion-stagger-step: 110ms;     /* décalage entre éléments d'une même liste */
 
   /* Courbes */

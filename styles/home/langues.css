@@ -53,5 +53,25 @@
   border-radius: var(--profil-radius-pill);
   background-color: var(--profil-color-accent);
 
+  /* Valeur de repli : sans JS (ou avec un mouvement réduit), la jauge
+     affiche directement son niveau final, sans animation ni dépendance
+     au reveal. */
+  width: var(--progress, 0%);
   transition: width var(--motion-duration-slow) var(--motion-ease-standard);
+}
+
+/* Une fois le reveal armé (voir motion.js / motion.css), la jauge part de
+   0 et ne se remplit jusqu'à --progress qu'au moment où la section Langues
+   devient visible — même déclencheur (.is-visible) que la cascade des
+   autres éléments de la section, donc le remplissage se relance lui aussi
+   à chaque rechargement complet de la page. */
+.motion-armed .profil-langues .profil-langue-jauge-remplissage {
+  width: 0%;
+}
+
+.motion-armed .profil-langues.is-visible .profil-langue-jauge-remplissage {
+  width: var(--progress, 0%);
+  /* Léger délai : la jauge se remplit une fois la cascade des éléments
+     bien engagée, plutôt qu'en même temps que leur fondu d'entrée. */
+  transition-delay: calc(var(--motion-stagger-step) * 2);
 }

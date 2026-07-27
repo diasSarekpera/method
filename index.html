@@ -318,7 +318,7 @@
             <span class="profil-langue-label">Bien</span>
           </div>
           <div class="profil-langue-jauge" role="img" aria-label="Niveau de français : bien">
-            <span class="profil-langue-jauge-remplissage" style="width: 90%"></span>
+            <span class="profil-langue-jauge-remplissage" style="--progress: 90%" data-progress="90"></span>
           </div>
         </li>
         <li class="profil-langue-item motion-stagger-item" style="--i: 1">
@@ -327,7 +327,7 @@
             <span class="profil-langue-label">Moyen</span>
           </div>
           <div class="profil-langue-jauge" role="img" aria-label="Niveau d'anglais : moyen">
-            <span class="profil-langue-jauge-remplissage" style="width: 55%"></span>
+            <span class="profil-langue-jauge-remplissage" style="--progress: 55%" data-progress="55"></span>
           </div>
         </li>
       </ul>
@@ -363,6 +363,15 @@
     <p class="profil-footer-secondaire">Conçu par Dias SARE KPERA</p>
   </footer>
 
-  <script type="module" src="scripts/home/main.js"></script>
+  <script src="scripts/base/commun.js" defer></script>
+  <script src="scripts/base/motion.js" defer></script>
+  <script src="scripts/home/banniere.js" defer></script>
+  <script src="scripts/home/apropos.js" defer></script>
+  <script src="scripts/home/projets-phares.js" defer></script>
+  <script src="scripts/home/experience.js" defer></script>
+  <script src="scripts/home/formation.js" defer></script>
+  <script src="scripts/home/langues.js" defer></script>
+  <script src="scripts/home/references.js" defer></script>
+  <script src="scripts/home/footer.js" defer></script>
 </body>
 </html>
