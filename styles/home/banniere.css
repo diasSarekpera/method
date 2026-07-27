@@ -48,9 +48,8 @@
 .profil-avatar-wrap::after {
   content: "";
   position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: translate(15%, 15%);
+  top: calc((var(--profil-avatar-taille) - 8px) * 0.85355 - 7.5px);
+  left: calc((var(--profil-avatar-taille) - 8px) * 0.85355 - 7.5px);
 
   width: 15px;
   height: 15px;
@@ -82,7 +81,7 @@
 }
 
 .profil-nom {
-  font-size: 1.75rem;
+  font-size: clamp(1.35rem, 1.05rem + 1.3vw, 1.75rem);
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.2;
@@ -91,7 +90,7 @@
 
 /* "Senior UI & UX Designer" -> violet vif, mesuré sur la maquette */
 .profil-titre {
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.15rem);
   font-weight: 400;
   color: var(--profil-color-role);
 }
@@ -108,6 +107,7 @@
 .profil-actions {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--profil-gap-m);
 
@@ -132,24 +132,38 @@
   align-items: center;
   justify-content: center;
 
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid var(--profil-color-border-strong);
   background: #ffffff;
   color: var(--profil-color-text-secondary);
 
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  transition:
+    background-color var(--motion-duration-fast) var(--motion-ease-standard),
+    border-color var(--motion-duration-fast) var(--motion-ease-standard),
+    color var(--motion-duration-fast) var(--motion-ease-standard),
+    transform var(--motion-duration-fast) var(--motion-ease-standard);
 }
 
 .profil-reseaux a:hover {
   background: var(--profil-color-pill-bg);
   color: var(--profil-color-text);
+  transform: translateY(-2px);
+}
+
+.profil-reseaux a:active {
+  transform: translateY(0) scale(0.94);
 }
 
 .profil-reseaux svg {
   width: 17px;
   height: 17px;
+  transition: transform var(--motion-duration-fast) var(--motion-ease-standard);
+}
+
+.profil-reseaux a:hover svg {
+  transform: rotate(-8deg) scale(1.08);
 }
 
 .profil-btn-contact {
@@ -158,9 +172,11 @@
   justify-content: center;
   gap: 6px;
 
-  padding: 8px 16px;
+  min-height: 44px;
+  padding: 8px 20px;
   border-radius: var(--profil-radius-pill);
   border: none;
+  box-shadow: 0 0 0 rgba(30, 33, 31, 0);
 
   font-size: 0.95rem;
   font-weight: 500;
@@ -170,13 +186,25 @@
   background: var(--profil-color-cta-bg);
   color: var(--profil-color-cta-text);
 
-  transition: background-color 0.15s ease;
+  transition:
+    background-color var(--motion-duration-fast) var(--motion-ease-standard),
+    box-shadow var(--motion-duration-fast) var(--motion-ease-standard),
+    transform var(--motion-duration-fast) var(--motion-ease-standard);
 }
 
 .profil-btn-contact:hover {
   background: var(--profil-color-cta-bg-hover);
 }
 
+.profil-btn-contact:active {
+  transform: scale(0.98);
+}
+
 .profil-btn-contact i {
   color: var(--profil-color-cta-text);
+  transition: transform var(--motion-duration-fast) var(--motion-ease-standard);
+}
+
+.profil-btn-contact:hover i {
+  transform: rotate(-8deg) scale(1.08);
 }

@@ -5,6 +5,7 @@
 // sont prêts à être complétés au fur et à mesure des besoins.
 
 import '../base/commun.js';
+import '../base/motion.js';
 import './banniere.js';
 import './apropos.js';
 import './projets-phares.js';

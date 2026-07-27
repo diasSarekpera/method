@@ -3,13 +3,15 @@
    ========================================================================= */
 
 .profil-apropos-texte {
-  font-size: 1.3rem;
+  max-width: var(--profil-mesure-lecture);
+  font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.3rem);
   font-weight: 400;
   line-height: 1.55;
   color: var(--profil-color-text);
 }
 
 .profil-apropos-secondaire {
+  max-width: var(--profil-mesure-lecture);
   font-size: 1rem;
   line-height: 1.55;
   color: var(--profil-color-text-secondary);

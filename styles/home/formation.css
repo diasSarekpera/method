@@ -5,7 +5,6 @@
 /* Titre de section + séparateur horizontal, fidèle à la maquette */
 .profil-formation > .profil-eyebrow {
   padding-bottom: var(--profil-gap-m);
-  border-bottom: 1px solid var(--profil-color-border);
 }
 
 .profil-formation-item {
@@ -23,10 +22,10 @@
 }
 
 .profil-formation-date {
-  flex: 0 0 92px;
+  flex: 0 0 clamp(68px, 18vw, 92px);
   text-align: right;
 
-  font-size: 0.88rem;
+  font-size: clamp(0.8rem, 0.74rem + 0.3vw, 0.88rem);
   font-weight: 400;
   padding-top: 2px;
 }
@@ -41,6 +40,15 @@
   border-radius: 50%;
   background-color: var(--profil-color-text);
   box-shadow: 0 0 0 3px #ffffff;
+
+  transition:
+    background-color var(--motion-duration-fast) var(--motion-ease-standard),
+    transform var(--motion-duration-fast) var(--motion-ease-standard);
+}
+
+.profil-formation-item:hover .profil-formation-puce {
+  background-color: var(--profil-color-accent);
+  transform: scale(1.4);
 }
 
 .profil-formation-puce::after {

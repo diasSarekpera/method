@@ -9,14 +9,7 @@
   justify-content: space-between;
   gap: var(--profil-gap-m);
 
-  /* séparateur horizontal entre l'entête et la grille de projets, comme sur la maquette */
   padding-bottom: var(--profil-gap-m);
-  border-bottom: 1px solid var(--profil-color-border);
-}
-
-.profil-projets-phares .profil-eyebrow {
-  /* label plus contrasté que l'eyebrow générique, fidèle à la capture */
-  color: var(--profil-color-text);
 }
 
 .profil-btn-outline {
@@ -25,10 +18,12 @@
   justify-content: center;
   gap: 6px;
 
+  min-height: 44px;
   padding: 10px 20px;
   border-radius: 8px;
   border: 1px solid var(--profil-color-border-strong);
   background: #ffffff;
+  box-shadow: 0 0 0 rgba(30, 33, 31, 0);
 
   font-size: 0.95rem;
   font-weight: 500;
@@ -36,18 +31,25 @@
   text-decoration: none;
   color: var(--profil-color-text);
 
-  transition: background-color 0.15s ease, border-color 0.15s ease;
+  transition:
+    background-color var(--motion-duration-fast) var(--motion-ease-standard),
+    border-color var(--motion-duration-fast) var(--motion-ease-standard),
+    box-shadow var(--motion-duration-fast) var(--motion-ease-standard),
+    transform var(--motion-duration-fast) var(--motion-ease-standard);
 }
 
 .profil-btn-outline:hover {
   background: var(--profil-color-pill-bg);
 }
 
+.profil-btn-outline:active {
+  transform: scale(0.98);
+}
+
 .profil-projets-grille {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: var(--profil-gap-m);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--profil-gap-l) var(--profil-gap-m);
 }
 
 .profil-projet-carte {
@@ -55,32 +57,46 @@
   flex-direction: column;
   gap: 8px;
 
-  flex: 1 1 calc(50% - var(--profil-gap-m) / 2);
-  min-width: 160px;
-
-  /* fin séparateur vertical entre les deux cartes, comme sur la maquette */
-  padding-right: var(--profil-gap-m);
-  border-right: 1px solid var(--profil-color-border);
+  /* légère élévation au survol : discrète, sans ombre artificielle sur un
+     bloc qui n'a pas de fond propre (pas de "fausse carte") */
+  transition: transform var(--motion-duration-fast) var(--motion-ease-standard);
 }
 
-.profil-projet-carte:last-child {
-  padding-right: 0;
-  border-right: none;
+.profil-projet-carte:hover {
+  transform: translateY(-3px);
 }
 
-.profil-projet-carte img {
+/* Cadre qui contient le zoom d'image au survol sans déborder du rayon arrondi */
+.profil-projet-media {
   width: 100%;
   aspect-ratio: 4 / 3;
+  border-radius: var(--profil-radius-image);
+  overflow: hidden;
+}
+
+.profil-projet-media img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: var(--profil-radius-image);
   display: block;
+
+  transition: transform var(--motion-duration-state) var(--motion-ease-standard);
+}
+
+.profil-projet-carte:hover .profil-projet-media img {
+  transform: scale(1.05);
 }
 
 .profil-projet-carte h3 {
   font-size: 1.05rem;
   font-weight: 500;
   color: var(--profil-color-text);
+  transition: color var(--motion-duration-fast) var(--motion-ease-standard);
+}
+
+.profil-projet-carte:hover h3 {
+  color: var(--profil-color-accent);
 }
 
 .profil-projet-carte p {

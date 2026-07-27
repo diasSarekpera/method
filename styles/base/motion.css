@@ -1,0 +1,29 @@
+/* =========================================================================
+   MOTION.CSS — Motion Design System : apparitions au scroll (reveal)
+   =========================================================================
+
+   Principe de progressive enhancement :
+   Par défaut (sans cette classe), tout le contenu est visible normalement.
+   C'est motion.js qui pose ".motion-armed" sur <html> — uniquement si
+   IntersectionObserver est supporté ET si l'utilisateur n'a pas demandé
+   de réduire les animations. Un site sans JS, ou un navigateur ancien,
+   ou une préférence d'accessibilité : le contenu reste simplement visible,
+   sans jamais rester bloqué en opacity: 0.
+
+   Seules transform/opacity sont animées (performant, pas de repaint layout).
+   ========================================================================= */
+
+.motion-armed .motion-stagger-item {
+  opacity: 0;
+  transform: translateY(16px);
+
+  transition:
+    opacity var(--motion-duration-enter) var(--motion-ease-out),
+    transform var(--motion-duration-enter) var(--motion-ease-out);
+  transition-delay: calc(var(--i, 0) * var(--motion-stagger-step));
+}
+
+.motion-armed .is-visible .motion-stagger-item {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -13,14 +13,24 @@
 
     <!-- Bannière + avatar + identité -->
     <section class="profil-banniere">
-      <img class="profil-banniere-img" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=400&fit=crop&q=80" alt="Bannière de profil">
+      <img
+        class="profil-banniere-img"
+        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=400&fit=crop&q=80"
+        srcset="
+          https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=200&fit=crop&q=80 600w,
+          https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&h=300&fit=crop&q=80 900w,
+          https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=400&fit=crop&q=80 1200w,
+          https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&h=533&fit=crop&q=80 1600w"
+        sizes="(min-width: 1000px) 1000px, 100vw"
+        width="1200" height="400"
+        alt="Bannière de profil">
 
       <div class="profil-identite">
-        <span class="profil-avatar-wrap">
-          <img class="profil-avatar" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=300&h=300&fit=crop&q=80" alt="Photo de profil de Méthode Hounkanrin">
+        <span class="profil-avatar-wrap motion-stagger-item" style="--i: 0">
+          <img class="profil-avatar" src="/assets/images/profile.png" width="128" height="128" alt="Photo de profil de Méthode Hounkanrin">
         </span>
 
-        <div class="profil-identite-ligne">
+        <div class="profil-identite-ligne motion-stagger-item" style="--i: 1">
         <div class="profil-identite-infos">
           <h1 class="profil-nom">Méthode Hounkanrin</h1>
           <p class="profil-titre">Consultant en Marketing Digital &amp; Développeur Web</p>
@@ -52,7 +62,7 @@
             </li>
           </ul>
           <!-- contact.html supprimé : bouton redirigé vers le canal de contact réel déjà utilisé sur le site (WhatsApp) -->
-          <a href="https://wa.me/96320368" target="_blank" rel="noopener noreferrer" class="profil-btn-contact"><i class="fas fa-bolt"></i> Me contacter</a>
+          <a href="https://wa.me/96320368" target="_blank" rel="noopener noreferrer" class="profil-btn-contact"><i class="fas fa-phone"></i> Me contacter</a>
         </div>
         </div>
       </div>
@@ -73,15 +83,15 @@
 
       <h3 class="profil-eyebrow profil-eyebrow-secondaire">Services</h3>
       <ul class="profil-badges">
-        <li>Développement Web</li>
-        <li>Design Graphique</li>
-        <li>Marketing Digital</li>
-        <li>Identité Visuelle</li>
-        <li>SEO</li>
-        <li>Gestion de Projet</li>
-        <li>WordPress</li>
-        <li>Figma</li>
-        <li>Photoshop / Illustrator</li>
+        <li class="motion-stagger-item" style="--i: 0">Développement Web</li>
+        <li class="motion-stagger-item" style="--i: 1">Design Graphique</li>
+        <li class="motion-stagger-item" style="--i: 2">Marketing Digital</li>
+        <li class="motion-stagger-item" style="--i: 3">Identité Visuelle</li>
+        <li class="motion-stagger-item" style="--i: 4">SEO</li>
+        <li class="motion-stagger-item" style="--i: 5">Gestion de Projet</li>
+        <li class="motion-stagger-item" style="--i: 6">WordPress</li>
+        <li class="motion-stagger-item" style="--i: 7">Figma</li>
+        <li class="motion-stagger-item" style="--i: 8">Photoshop / Illustrator</li>
       </ul>
     </section>
 
@@ -93,16 +103,72 @@
       </div>
 
       <div class="profil-projets-grille">
-        <article class="profil-projet-carte">
-          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=450&fit=crop&q=80" alt="Application e-commerce">
+        <article class="profil-projet-carte motion-stagger-item" style="--i: 0">
+          <div class="profil-projet-media">
+            <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=450&fit=crop&q=80"
+              srcset="
+                https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop&q=80 400w,
+                https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=450&fit=crop&q=80 600w,
+                https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&h=675&fit=crop&q=80 900w"
+              sizes="(min-width: 561px) 460px, 100vw"
+              width="600" height="450"
+              loading="lazy" decoding="async"
+              alt="Application e-commerce">
+          </div>
           <h3>Mini E-commerce</h3>
-          <p>Développeur Web, Designer Produit</p>
+          <p>Boutique en ligne simulée, panier et filtrage dynamique</p>
         </article>
 
-        <article class="profil-projet-carte">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=450&fit=crop&q=80" alt="Tableau de bord analytics">
+        <article class="profil-projet-carte motion-stagger-item" style="--i: 1">
+          <div class="profil-projet-media">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=450&fit=crop&q=80"
+              srcset="
+                https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&q=80 400w,
+                https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=450&fit=crop&q=80 600w,
+                https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=675&fit=crop&q=80 900w"
+              sizes="(min-width: 561px) 460px, 100vw"
+              width="600" height="450"
+              loading="lazy" decoding="async"
+              alt="Tableau de bord analytics">
+          </div>
           <h3>Dashboard Analytics</h3>
-          <p>Développeur Web, Designer Produit</p>
+          <p>Visualisation de données, graphiques et tableaux dynamiques</p>
+        </article>
+
+        <article class="profil-projet-carte motion-stagger-item" style="--i: 2">
+          <div class="profil-projet-media">
+            <img
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=450&fit=crop&q=80"
+              srcset="
+                https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop&q=80 400w,
+                https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=450&fit=crop&q=80 600w,
+                https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=900&h=675&fit=crop&q=80 900w"
+              sizes="(min-width: 561px) 460px, 100vw"
+              width="600" height="450"
+              loading="lazy" decoding="async"
+              alt="Mini-jeu JavaScript interactif">
+          </div>
+          <h3>Mini-jeu JavaScript</h3>
+          <p>Développeur Web · HTML, CSS, JavaScript</p>
+        </article>
+
+        <article class="profil-projet-carte motion-stagger-item" style="--i: 3">
+          <div class="profil-projet-media">
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=450&fit=crop&q=80"
+              srcset="
+                https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop&q=80 400w,
+                https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=450&fit=crop&q=80 600w,
+                https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=675&fit=crop&q=80 900w"
+              sizes="(min-width: 561px) 460px, 100vw"
+              width="600" height="450"
+              loading="lazy" decoding="async"
+              alt="Site portfolio">
+          </div>
+          <h3>Site Portfolio</h3>
+          <p>Site personnel responsive · compétences, projets, contact</p>
         </article>
       </div>
     </section>
@@ -111,7 +177,7 @@
     <section class="profil-bloc profil-experience">
       <h2 class="profil-eyebrow">Expérience</h2>
 
-      <div class="profil-experience-item">
+      <div class="profil-experience-item motion-stagger-item" style="--i: 0">
         <div class="profil-experience-icone"><i class="fas fa-laptop-code"></i></div>
         <div class="profil-experience-contenu">
           <div class="profil-experience-ligne">
@@ -126,7 +192,7 @@
         </div>
       </div>
 
-      <div class="profil-experience-item">
+      <div class="profil-experience-item motion-stagger-item" style="--i: 1">
         <div class="profil-experience-icone"><i class="fas fa-water"></i></div>
         <div class="profil-experience-contenu">
           <div class="profil-experience-ligne">
@@ -140,7 +206,7 @@
         </div>
       </div>
 
-      <div class="profil-experience-item">
+      <div class="profil-experience-item motion-stagger-item" style="--i: 2">
         <div class="profil-experience-icone"><i class="fas fa-people-group"></i></div>
         <div class="profil-experience-contenu">
           <div class="profil-experience-ligne">
@@ -160,7 +226,7 @@
     <section class="profil-bloc profil-formation">
       <h2 class="profil-eyebrow">Formation</h2>
 
-      <div class="profil-formation-item">
+      <div class="profil-formation-item motion-stagger-item" style="--i: 0">
         <span class="profil-formation-date">Dates à préciser</span>
         <span class="profil-formation-puce"></span>
         <div class="profil-formation-contenu">
@@ -169,7 +235,7 @@
         </div>
       </div>
 
-      <div class="profil-formation-item">
+      <div class="profil-formation-item motion-stagger-item" style="--i: 1">
         <span class="profil-formation-date">Dates à préciser</span>
         <span class="profil-formation-puce"></span>
         <div class="profil-formation-contenu">
@@ -178,7 +244,7 @@
         </div>
       </div>
 
-      <div class="profil-formation-item">
+      <div class="profil-formation-item motion-stagger-item" style="--i: 2">
         <span class="profil-formation-date">Autoformation</span>
         <span class="profil-formation-puce"></span>
         <div class="profil-formation-contenu">
@@ -188,30 +254,12 @@
       </div>
     </section>
 
-    <!-- Études de cas / Side projects -->
-    <section class="profil-bloc profil-etudes-projets">
-      <div class="profil-etudes-projets-colonne">
-        <h2 class="profil-eyebrow">Réalisations</h2>
-        <ul class="profil-liens-projets">
-          <li><a href="docs/sitewp.pdf" target="_blank">Mon Portfolio <i class="fas fa-arrow-up-right-from-square"></i></a></li>
-        </ul>
-      </div>
-
-      <div class="profil-etudes-projets-colonne">
-        <h2 class="profil-eyebrow">Projets annexes</h2>
-        <ul class="profil-liens-projets">
-          <li><span>Dashboard Analytics <span class="profil-badge-bientot">Bientôt</span></span></li>
-          <li><span>Mini-jeu JavaScript <span class="profil-badge-bientot">Bientôt</span></span></li>
-        </ul>
-      </div>
-    </section>
-
   </main>
 
   <!-- Footer -->
   <footer class="profil-footer">
     <p>&copy; 2025 Méthode Hounkanrin · Tous droits réservés.</p>
-    <p class="profil-footer-secondaire">Créé avec soin · Basé à Comè, Bénin</p>
+    <p class="profil-footer-secondaire">Conçu par Dias SARE KPERA</p>
   </footer>
 
   <script type="module" src="scripts/home/main.js"></script>

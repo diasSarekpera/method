@@ -36,6 +36,17 @@
   overflow: hidden;
 }
 
+/* La bannière hero est toujours la toute première carte de la page :
+   pas de bordure en haut ni sur les côtés, pour qu'elle soit parfaitement
+   collée aux bords de l'écran (surtout visible en mobile, où le filet
+   latéral longeait l'image). On garde seulement la bordure du bas, qui
+   sépare la bannière de la carte suivante. */
+.profil-banniere {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
 /* Chaque section (About / Featured / Experience / Education / …) partage
    le même rythme horizontal et vertical. */
 .profil-bloc {
