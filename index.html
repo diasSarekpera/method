@@ -14,7 +14,8 @@
     <!-- Bannière + avatar + identité -->
     <section class="profil-banniere">
       <img
-        class="profil-banniere-img"
+        class="profil-banniere-img motion-stagger-item"
+        style="--i: 0"
         src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=400&fit=crop&q=80"
         srcset="
           https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=200&fit=crop&q=80 600w,
@@ -26,18 +27,24 @@
         alt="Bannière de profil">
 
       <div class="profil-identite">
-        <span class="profil-avatar-wrap motion-stagger-item" style="--i: 0">
+        <span class="profil-avatar-wrap motion-stagger-item" style="--i: 1">
           <img class="profil-avatar" src="/assets/images/profile.png" width="128" height="128" alt="Photo de profil de Méthode Hounkanrin">
         </span>
 
-        <div class="profil-identite-ligne motion-stagger-item" style="--i: 1">
+        <div class="profil-identite-ligne">
         <div class="profil-identite-infos">
-          <h1 class="profil-nom">Méthode Hounkanrin</h1>
-          <p class="profil-titre">Graphiste-Vidéaste &amp; Consultant en Marketing Digital</p>
-          <p class="profil-lieu"><i class="fas fa-location-dot"></i> Comè, Bénin</p>
+          <h1 class="profil-nom motion-stagger-item" style="--i: 2">Méthode Hounkanrin</h1>
+          <p class="profil-titre motion-stagger-item" style="--i: 3">Graphiste-Vidéaste &amp; Consultant en Marketing Digital</p>
+          <p class="profil-lieu motion-stagger-item" style="--i: 4">
+            <i class="fas fa-location-dot"></i>
+            <span class="sr-only">Comè, Bénin, Rue Amoussouvi</span>
+            <span class="profil-lieu-texte" aria-hidden="true">
+              <span class="profil-lieu-fixe">Comè, Bénin</span><span class="profil-lieu-suite" data-suite=", Rue Amoussouvi"></span><span class="profil-lieu-curseur"></span>
+            </span>
+          </p>
         </div>
 
-        <div class="profil-actions">
+        <div class="profil-actions motion-stagger-item" style="--i: 5">
           <ul class="profil-reseaux">
             <li>
               <a href="https://web.facebook.com/methode.hounkanrin.37?locale=fr_FR" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -91,6 +98,7 @@
         <li class="motion-stagger-item" style="--i: 5">Gestion de Projet</li>
         <li class="motion-stagger-item" style="--i: 6">Photoshop / Illustrator / Canva</li>
         <li class="motion-stagger-item" style="--i: 7">Leadership</li>
+        <li class="motion-stagger-item" style="--i: 8">Développement Web (autodidacte)</li>
       </ul>
     </section>
 
@@ -268,6 +276,62 @@
           <p>Aménagement et Équipement Rural · Bénin</p>
         </div>
       </div>
+
+      <div class="profil-formation-item motion-stagger-item" style="--i: 3">
+        <span class="profil-formation-date">2022</span>
+        <span class="profil-formation-puce"></span>
+        <div class="profil-formation-contenu">
+          <h3>Développement Web · HTML, CSS, JavaScript</h3>
+          <p>Auto-formation en ligne (autodidacte)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Langues -->
+    <section class="profil-bloc profil-langues">
+      <h2 class="profil-eyebrow">Langues</h2>
+      <ul class="profil-langues-liste">
+        <li class="profil-langue-item motion-stagger-item" style="--i: 0">
+          <div class="profil-langue-ligne">
+            <span class="profil-langue-nom">Français</span>
+            <span class="profil-langue-label">Bien</span>
+          </div>
+          <div class="profil-langue-jauge" role="img" aria-label="Niveau de français : bien">
+            <span class="profil-langue-jauge-remplissage" style="width: 90%"></span>
+          </div>
+        </li>
+        <li class="profil-langue-item motion-stagger-item" style="--i: 1">
+          <div class="profil-langue-ligne">
+            <span class="profil-langue-nom">Anglais</span>
+            <span class="profil-langue-label">Moyen</span>
+          </div>
+          <div class="profil-langue-jauge" role="img" aria-label="Niveau d'anglais : moyen">
+            <span class="profil-langue-jauge-remplissage" style="width: 55%"></span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Références professionnelles -->
+    <section class="profil-bloc profil-references">
+      <h2 class="profil-eyebrow">Références professionnelles</h2>
+      <div class="profil-references-grille">
+        <div class="profil-reference-item motion-stagger-item" style="--i: 0">
+          <div class="profil-reference-icone"><i class="fas fa-user-tie"></i></div>
+          <div class="profil-reference-contenu">
+            <h3>Amélé Padonou</h3>
+            <p>Présidente de l'ONG Étonam</p>
+          </div>
+        </div>
+        <div class="profil-reference-item motion-stagger-item" style="--i: 1">
+          <div class="profil-reference-icone"><i class="fas fa-user-tie"></i></div>
+          <div class="profil-reference-contenu">
+            <h3>Carmel Gagnon</h3>
+            <p>CEO, Market Kings</p>
+          </div>
+        </div>
+      </div>
+      <p class="profil-references-note">Coordonnées complètes transmises sur demande.</p>
     </section>
 
   </main>

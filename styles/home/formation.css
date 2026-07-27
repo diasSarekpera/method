@@ -103,3 +103,8 @@
 .profil-formation-item:nth-child(3) .profil-formation-contenu p {
   color: var(--profil-color-edu-3);
 }
+
+.profil-formation-item:nth-child(4) .profil-formation-date,
+.profil-formation-item:nth-child(4) .profil-formation-contenu p {
+  color: var(--profil-color-edu-4);
+}

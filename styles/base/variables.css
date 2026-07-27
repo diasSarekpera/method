@@ -69,6 +69,7 @@
   --profil-color-edu-1: var(--profil-color-accent);
   --profil-color-edu-2: var(--profil-color-accent);
   --profil-color-edu-3: var(--profil-color-accent);
+  --profil-color-edu-4: var(--profil-color-accent);
 
   --profil-color-cta-bg: #1E211F;
   --profil-color-cta-bg-hover: #0A5B44;
@@ -87,8 +88,8 @@
   /* Durées */
   --motion-duration-fast: 180ms;    /* hover, focus, feedback immédiat */
   --motion-duration-state: 240ms;   /* changements d'état (validation, ouverture) */
-  --motion-duration-enter: 450ms;   /* apparitions (fade up, reveal) */
-  --motion-stagger-step: 70ms;      /* décalage entre éléments d'une même liste */
+  --motion-duration-enter: 650ms;   /* apparitions (fade up, reveal) */
+  --motion-stagger-step: 110ms;     /* décalage entre éléments d'une même liste */
 
   /* Courbes */
   --motion-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);  /* hover/focus, symétrique */

@@ -11,5 +11,7 @@ import './apropos.js';
 import './projets-phares.js';
 import './experience.js';
 import './formation.js';
+import './langues.js';
+import './references.js';
 import './realisations.js';
 import './footer.js';

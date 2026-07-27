@@ -22,6 +22,12 @@
   border-bottom: none;
 }
 
+/* Motion : entrée depuis la gauche, cohérente avec la lecture d'une timeline */
+.profil-experience-item {
+  --motion-x: -20px;
+  --motion-y: 0;
+}
+
 /* Icône "logo" : glyphe seul, sans boîte ni fond (fidèle à la maquette) */
 .profil-experience-icone {
   display: flex;

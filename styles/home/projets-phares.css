@@ -50,6 +50,18 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--profil-gap-l) var(--profil-gap-m);
+
+  /* Motion : rythme propre à cette grille. Le pas global (70ms, pensé pour
+     les petites listes comme les badges "Services") est trop rapproché pour
+     4 cartes — les fenêtres d'apparition se chevauchent et donnent
+     l'impression que tout arrive d'un coup. Un pas plus large + une entrée
+     un peu plus longue font lire clairement "une carte, puis l'autre",
+     ligne par ligne, sans brutalité.
+     Avec 2 colonnes, --i suit l'ordre du DOM (0,1 = ligne 1 / 2,3 = ligne 2) :
+     un pas de 220ms donne 0 / 220 / 440 / 660ms, assez espacé pour bien
+     percevoir "ligne 1 (carte à carte), puis ligne 2 (carte à carte)". */
+  --motion-stagger-step: 220ms;
+  --motion-duration-enter: 700ms;
 }
 
 .profil-projet-carte {
@@ -64,6 +76,22 @@
 
 .profil-projet-carte:hover {
   transform: translateY(-3px);
+}
+
+/* --- Motion : chaque carte glisse depuis le côté opposé à sa colonne
+   (gauche/droite), pour un rendu moins "uniforme" qu'un simple fade-up.
+   Restreint à >560px : en dessous, la grille repasse à 1 colonne
+   (voir responsive.css) et un simple fade-up est plus lisible. --- */
+@media (min-width: 561px) {
+  .profil-projets-grille .motion-stagger-item:nth-child(odd) {
+    --motion-x: -20px;
+    --motion-y: 0;
+  }
+
+  .profil-projets-grille .motion-stagger-item:nth-child(even) {
+    --motion-x: 20px;
+    --motion-y: 0;
+  }
 }
 
 /* Cadre qui contient le zoom d'image au survol sans déborder du rayon arrondi */

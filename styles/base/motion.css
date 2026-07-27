@@ -13,9 +13,17 @@
    Seules transform/opacity sont animées (performant, pas de repaint layout).
    ========================================================================= */
 
+/* Direction de l'apparition : pilotée par variables CSS plutôt que par des
+   classes JS. Chaque section peut redéfinir --motion-x / --motion-y /
+   --motion-scale sur ses propres .motion-stagger-item (dans SON fichier CSS)
+   pour varier fade-up / fade-latéral / scale-in, sans toucher au moteur
+   ci-dessous ni au HTML. Fallback : identique au comportement d'origine
+   (fade + léger déplacement vers le haut). */
 .motion-armed .motion-stagger-item {
   opacity: 0;
-  transform: translateY(16px);
+  transform:
+    translate(var(--motion-x, 0), var(--motion-y, 16px))
+    scale(var(--motion-scale, 1));
 
   transition:
     opacity var(--motion-duration-enter) var(--motion-ease-out),
@@ -25,5 +33,5 @@
 
 .motion-armed .is-visible .motion-stagger-item {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0, 0) scale(1);
 }
