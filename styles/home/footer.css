@@ -28,3 +28,13 @@
   color: var(--profil-color-text-muted);
   font-size: 0.8rem;
 }
+
+.profil-footer-secondaire a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.profil-footer-secondaire a:hover {
+  color: var(--profil-color-text-secondary);
+}
