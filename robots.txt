@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://method-4ia9.onrender.com/sitemap.xml
